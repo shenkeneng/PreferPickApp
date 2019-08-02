@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        style="@style/ActionBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/frxs_blue_light">
+
+        <include layout="@layout/view_title" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <LinearLayout
+            android:id="@+id/ll_start_pick"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@mipmap/start_pick_page" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="开 始 拣 货"
+                android:textColor="#b1b3b3"
+                android:textSize="@dimen/font_max" />
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_version"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"
+            android:gravity="center_horizontal"
+            android:text=""
+            android:textColor="#b1b3b3"
+            android:textSize="@dimen/font_normal"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_choose_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_user_name"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="拣货员：方方方拣货员"
+            android:textSize="@dimen/font_large"
+            android:padding="10dp"
+            android:textColor="@color/frxs_white"
+            android:background="@color/frxs_blue_light"
+            android:gravity="center_vertical"/>
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="提货日期："
+            android:textSize="@dimen/font_large"
+            android:padding="10dp"
+            android:textColor="@color/frxs_white"
+            android:background="@color/frxs_blue_dark"
+            android:gravity="center_vertical"
+            android:lines="2" />
+    </LinearLayout>
+
+</LinearLayout>

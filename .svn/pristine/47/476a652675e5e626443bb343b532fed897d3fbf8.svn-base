@@ -1,0 +1,392 @@
+package com.frxs.wmspick.model;
+
+import java.io.Serializable;
+import java.util.List;
+
+/**
+ * Created by Chentie on 2018/9/21.
+ */
+
+public class PickingOrder implements Serializable{
+
+    /**
+     * 门店拣货单
+     */
+
+    private String LineName; //门店 | 线路（共有）
+    private int PGroupID; //门店 | 线路 | 商品（共有）
+    private String PGroupName; //门店 | 线路 | 商品（共有）
+    private String PickID;
+    private String PickStatus;
+    private String PickType; //门店 | 线路 | 商品（共有）
+    private double Qty;
+    private String SendCardNo;
+    private String ShelfAreaCode;
+    private String ShelfAreaName;
+    private String StoreName;
+    private String StoreNo;
+    private List<ItemsBean> Items;
+
+    /**
+     * 线路拣货单
+     */
+    private String BatPickID; //线路 | 商品（共有）
+    private int LineID;
+    private String LineCode;
+
+    /**
+     * 商品拣货单
+     */
+    private double ProductId;
+    private String SKU;
+    private String ProductName;
+    private String SKUContent;
+    private String Unit;
+
+    public String getLineName() {
+        return LineName;
+    }
+
+    public void setLineName(String LineName) {
+        this.LineName = LineName;
+    }
+
+    public int getPGroupID() {
+        return PGroupID;
+    }
+
+    public void setPGroupID(int PGroupID) {
+        this.PGroupID = PGroupID;
+    }
+
+    public String getPGroupName() {
+        return PGroupName;
+    }
+
+    public void setPGroupName(String PGroupName) {
+        this.PGroupName = PGroupName;
+    }
+
+    public String getPickID() {
+        return PickID;
+    }
+
+    public void setPickID(String PickID) {
+        this.PickID = PickID;
+    }
+
+    public String getPickStatus() {
+        return PickStatus;
+    }
+
+    public void setPickStatus(String PickStatus) {
+        this.PickStatus = PickStatus;
+    }
+
+    public String getPickType() {
+        return PickType;
+    }
+
+    public void setPickType(String PickType) {
+        this.PickType = PickType;
+    }
+
+    public double getQty() {
+        return Qty;
+    }
+
+    public void setQty(double Qty) {
+        this.Qty = Qty;
+    }
+
+    public String getSendCardNo() {
+        return SendCardNo;
+    }
+
+    public void setSendCardNo(String SendCardNo) {
+        this.SendCardNo = SendCardNo;
+    }
+
+    public String getShelfAreaCode() {
+        return ShelfAreaCode;
+    }
+
+    public void setShelfAreaCode(String ShelfAreaCode) {
+        this.ShelfAreaCode = ShelfAreaCode;
+    }
+
+    public String getShelfAreaName() {
+        return ShelfAreaName;
+    }
+
+    public void setShelfAreaName(String ShelfAreaName) {
+        this.ShelfAreaName = ShelfAreaName;
+    }
+
+    public String getStoreName() {
+        return StoreName;
+    }
+
+    public void setStoreName(String StoreName) {
+        this.StoreName = StoreName;
+    }
+
+    public String getStoreNo() {
+        return StoreNo;
+    }
+
+    public void setStoreNo(String storeNo) {
+        StoreNo = storeNo;
+    }
+
+    public String getBatPickID() {
+        return BatPickID;
+    }
+
+    public void setBatPickID(String batPickID) {
+        BatPickID = batPickID;
+    }
+
+    public int getLineID() {
+        return LineID;
+    }
+
+    public void setLineID(int lineID) {
+        LineID = lineID;
+    }
+
+    public String getLineCode() {
+        return LineCode;
+    }
+
+    public void setLineCode(String lineCode) {
+        LineCode = lineCode;
+    }
+
+    public double getProductId() {
+        return ProductId;
+    }
+
+    public void setProductId(double productId) {
+        ProductId = productId;
+    }
+
+    public String getSKU() {
+        return SKU;
+    }
+
+    public void setSKU(String SKU) {
+        this.SKU = SKU;
+    }
+
+    public String getProductName() {
+        return ProductName;
+    }
+
+    public void setProductName(String productName) {
+        ProductName = productName;
+    }
+
+    public String getSKUContent() {
+        return SKUContent;
+    }
+
+    public void setSKUContent(String SKUContent) {
+        this.SKUContent = SKUContent;
+    }
+
+    public String getUnit() {
+        return Unit;
+    }
+
+    public void setUnit(String unit) {
+        Unit = unit;
+    }
+
+    public List<ItemsBean> getItems() {
+        return Items;
+    }
+
+    public void setItems(List<ItemsBean> Items) {
+        this.Items = Items;
+    }
+
+    public static class ItemsBean implements Serializable{
+        /**
+         * 门店拣货单详情
+         */
+
+        private double BuyQty; //门店 | 线路 | 商品（共有）
+        private String PickID;
+        private String PickItemID;
+        private double ProductId; //门店 | 线路（共有）
+        private String ProductName; //门店 | 线路（共有）
+        private String SKUContent; //门店 | 线路（共有）
+        private String ShelfAreaName;
+        private String SKU; //门店 | 线路（共有）
+        private int StationID;
+        private String StationName;
+        private int StationSort;
+        private String Unit; //门店 | 线路（共有）
+        private boolean isPick = false;
+        private String ShelfCode;//门店 | 线路（共有）
+
+        /**
+         * 线路拣货单详情
+         */
+        private String BatPickID;//线路 | 商品（共有）
+        private String BatPickItemID;//线路 | 商品（共有）
+
+        /**
+         * 商品拣货单详情
+         */
+        private int LineID;
+        private String LineName;
+
+        public double getBuyQty() {
+            return BuyQty;
+        }
+
+        public void setBuyQty(double BuyQty) {
+            this.BuyQty = BuyQty;
+        }
+
+        public String getPickID() {
+            return PickID;
+        }
+
+        public void setPickID(String PickID) {
+            this.PickID = PickID;
+        }
+
+        public String getPickItemID() {
+            return PickItemID;
+        }
+
+        public void setPickItemID(String PickItemID) {
+            this.PickItemID = PickItemID;
+        }
+
+        public double getProductId() {
+            return ProductId;
+        }
+
+        public void setProductId(double ProductId) {
+            this.ProductId = ProductId;
+        }
+
+        public String getProductName() {
+            return ProductName;
+        }
+
+        public void setProductName(String ProductName) {
+            this.ProductName = ProductName;
+        }
+
+        public String getSKUContent() {
+            return SKUContent;
+        }
+
+        public void setSKUContent(String SKUContent) {
+            this.SKUContent = SKUContent;
+        }
+
+        public String getShelfAreaName() {
+            return ShelfAreaName;
+        }
+
+        public void setShelfAreaName(String ShelfAreaName) {
+            this.ShelfAreaName = ShelfAreaName;
+        }
+
+        public String getSKU() {
+            return SKU;
+        }
+
+        public void setSKU(String Sku) {
+            this.SKU = Sku;
+        }
+
+        public int getStationID() {
+            return StationID;
+        }
+
+        public void setStationID(int StationID) {
+            this.StationID = StationID;
+        }
+
+        public String getStationName() {
+            return StationName;
+        }
+
+        public void setStationName(String StationName) {
+            this.StationName = StationName;
+        }
+
+        public int getStationSort() {
+            return StationSort;
+        }
+
+        public void setStationSort(int StationSort) {
+            this.StationSort = StationSort;
+        }
+
+        public String getUnit() {
+            return Unit;
+        }
+
+        public void setUnit(String Unit) {
+            this.Unit = Unit;
+        }
+
+        public boolean isPick() {
+            return isPick;
+        }
+
+        public void setPick(boolean pick) {
+            isPick = pick;
+        }
+
+        public String getShelfCode() {
+            return ShelfCode;
+        }
+
+        public void setShelfCode(String shelfCode) {
+            ShelfCode = shelfCode;
+        }
+
+        public String getBatPickID() {
+            return BatPickID;
+        }
+
+        public void setBatPickID(String batPickID) {
+            BatPickID = batPickID;
+        }
+
+        public String getBatPickItemID() {
+            return BatPickItemID;
+        }
+
+        public void setBatPickItemID(String batPickItemID) {
+            BatPickItemID = batPickItemID;
+        }
+
+        public int getLineID() {
+            return LineID;
+        }
+
+        public void setLineID(int lineID) {
+            LineID = lineID;
+        }
+
+        public String getLineName() {
+            return LineName;
+        }
+
+        public void setLineName(String lineName) {
+            LineName = lineName;
+        }
+    }
+
+
+}
